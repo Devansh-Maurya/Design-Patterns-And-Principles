@@ -1,4 +1,4 @@
-# Design-Patterns-And-Principles
+# Design Patterns and Principles
 **A collection of design patterns and principles written in Kotlin.**
 
 ### Design Principles
