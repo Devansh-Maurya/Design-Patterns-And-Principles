@@ -1,4 +1,4 @@
-package observer.weatherdata.javaapi
+package observer.weatherdata.inbuilt
 
 import java.util.Observable
 

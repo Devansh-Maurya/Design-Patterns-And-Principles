@@ -1,4 +1,4 @@
-package observer.weatherdata.javaapi
+package observer.weatherdata.inbuilt
 
 /**
  * Created by devansh on 26/08/20.

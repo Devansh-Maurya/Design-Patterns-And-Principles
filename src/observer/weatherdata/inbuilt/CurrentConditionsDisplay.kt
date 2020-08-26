@@ -1,4 +1,4 @@
-package observer.weatherdata.javaapi
+package observer.weatherdata.inbuilt
 
 import observer.weatherdata.scratch.DisplayElement
 import java.util.*
