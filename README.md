@@ -11,7 +11,8 @@
 
 * **Strive for loosely coupled designs between objects that interact.** Loosely coupled designs allow us to build flexible OO systems that can handle change because they minimize the interdependency between objects.
 
-* **The open-closed principle: Classes should be open for extension, but closed for modification.** allow classes to be easily extended to incorporate new behavior without modifying existing code. Such designs are resilient to change and flexible enough to take on new functionality to meet changing requirements. 
+* **The open-closed principle: Classes should be open for extension, but closed for modification.** allow classes to be easily extended to incorporate new behavior without modifying existing code. Such designs are resilient to change and flexible enough to take on new functionality to meet changing requirements. While it may seem like a contradiction, there are techniques for allowing code to be extended without direct modification.
+                                                                                                                                                                                                                                                                                                                          Be careful when choosing the areas of code that need to be extended; applying the Open-Closed Principle EVERYWHERE is wasteful and unnecessary, and can lead to complex, hard-to-understand code.
 
 ### Design Patterns
 
