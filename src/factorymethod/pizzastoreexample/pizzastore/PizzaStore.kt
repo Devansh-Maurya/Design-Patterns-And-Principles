@@ -1,6 +1,6 @@
-package factorymethod.pizzastore
+package factorymethod.pizzastoreexample.pizzastore
 
-import factorymethod.pizza.Pizza
+import factorymethod.pizzastoreexample.pizza.Pizza
 
 /**
  * Created by devansh on 02/09/20.

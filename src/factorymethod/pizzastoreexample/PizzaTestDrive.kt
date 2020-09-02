@@ -1,7 +1,7 @@
-package factorymethod
+package factorymethod.pizzastoreexample
 
-import factorymethod.pizzastore.ChicagoPizzaStore
-import factorymethod.pizzastore.NYPizzaStore
+import factorymethod.pizzastoreexample.pizzastore.ChicagoPizzaStore
+import factorymethod.pizzastoreexample.pizzastore.NYPizzaStore
 
 /**
  * Created by devansh on 02/09/20.

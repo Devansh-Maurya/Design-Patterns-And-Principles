@@ -1,4 +1,4 @@
-package factorymethod.pizza
+package factorymethod.pizzastoreexample.pizza
 
 /**
  * Created by devansh on 02/09/20.
