@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  message_from_branch:
+    runs-on: ubuntu-latest
+    name: Get message from branch name
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get branch name
+        id: branchname
+        run: echo ::set-output name=b_name::${GITHUB_REF#refs/*/}
+      - name: Get the message
+        id: branchmessage
+        uses: Devansh-Maurya/Github-Playground@master
+        with:
+          branch-name: ${{steps.branchname.outputs.b_name}}
+      - name: Print message
+        run: echo "The message body is ${{steps.branchmessage.outputs.body}}"
