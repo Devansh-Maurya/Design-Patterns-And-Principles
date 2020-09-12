@@ -15,4 +15,8 @@ class StereoOnWithCDCommand(private val stereo: Stereo) : Command {
             setVolume(11)
         }
     }
+
+    override fun undo() {
+        stereo.off()
+    }
 }
