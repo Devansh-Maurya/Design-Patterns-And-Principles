@@ -1,0 +1,43 @@
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  message_from_branch:
+    runs-on: ubuntu-latest
+    name: Send customised mail on PR open
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get pull request info
+        id: prinfo
+        run: |
+          echo ::set-output name=b_name::${{ github.event.pull_request.head.ref }}
+          echo ::set-output name=pr_title::${{ github.event.pull_request.title }}
+          echo ::set-output name=pr_url::${{ github.event.pull_request.html_url }}
+          echo ${{ github.event.pull_request.html_url }}
+
+      - name: Get the message
+        id: premail
+        uses: Devansh-Maurya/Get-Email-Message-From-Branch-Action@v3
+        with:
+          repo: ${{ github.repository }}
+          groups: pattern,principle
+          branch: ${{steps.prinfo.outputs.b_name}}
+          pr-title: ${{ steps.prinfo.outputs.pr_title}}
+          pr-url: ${{ steps.prinfo.outputs.pr_url}}
+
+      - name: Print message body
+        run: echo "The message body is ${{steps.premail.outputs.body}}"
+
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: ${{ steps.premail.outputs.subject }}
+          body: ${{ steps.premail.outputs.body }}
+          to: devansh233@gmail.com
+          from: ${{ secrets.MAIL_SENDER_NAME }}
