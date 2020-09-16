@@ -42,3 +42,4 @@
   * **Example:**
       1. [From scratch](src/singleton/scratch)
       2. [Using Kotlin's `object`](src/singleton/kotlinobject)
+      
