@@ -47,3 +47,6 @@
   * **Example:** A configurable remote control performing its actions using command objects
       1. [Without undo on invoker](src/command/RemoteLoader.kt)
       2. [With undo on invoker](src/command/RemoteLoaderWithUndo.kt)
+      
+* **Facade Pattern: The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.** To use the Facade Pattern, we create a class that simplifies and unifies a set of more complex classes that belong to some subsystem. Unlike a lot of patterns, Facade is fairly straightforward.
+  * **Example:** [Home Theater system's interface simplified by using a Facade pattern](src/facade/hometheaterexample)
