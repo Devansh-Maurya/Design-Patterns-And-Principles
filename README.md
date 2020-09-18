@@ -18,6 +18,14 @@
     _**Where’s the “inversion” in Dependency Inversion Principle?**_
     
     The “inversion” in the name Dependency Inversion Principle is there because it inverts the way you typically might think about your OO design. The low-level components depend on a higher level abstraction. Likewise, the high-level component is also tied to the same abstraction. So, the top-to-bottom dependency chart has inverted itself, with both high-level and low- level modules now depending on the abstraction.
+    
+* **Principle of Least Knowledge (Law of Demeter): Talk only to your immediate friends** It means when you are designing a system, for any object, be careful of the number of classes it interacts with and also how it comes to interact with those classes. This principle prevents us from creating designs that have a large number of classes coupled together so that changes in one part of the system cascade to other parts. When you build a lot of dependencies between many classes, you are building a fragile system that will be costly to maintain and complex for others to understand. But how do you keep from doing this? The principle provides some guidelines: take any object; now from any method in that object, the principle tells us that we should only invoke methods that belong to:
+    * The object itself
+    * Objects passed in as a parameter to the method
+    * Any object the method creates or instantiates (Notice that these guidelines tell us not to call methods on objects that were returned from calling other methods!!)
+    * Any components of the object (Think of a “component” as any object that is referenced by an instance variable. In other words, think of this as a HAS-A relationship)
+    
+    What’s the harm in calling the method of an object we get back from another call? Well, if we were to do that, then we’d be making a request of another object’s subpart (and increasing the number of objects we directly know). In such cases, the principle forces us to ask the object to make the request for us; that way we don’t have to know about its component objects (and we keep our circle of friends small).
 
 ### Design Patterns
 
