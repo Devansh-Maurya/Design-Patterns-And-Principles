@@ -18,6 +18,8 @@
     _**Where’s the “inversion” in Dependency Inversion Principle?**_
     
     The “inversion” in the name Dependency Inversion Principle is there because it inverts the way you typically might think about your OO design. The low-level components depend on a higher level abstraction. Likewise, the high-level component is also tied to the same abstraction. So, the top-to-bottom dependency chart has inverted itself, with both high-level and low- level modules now depending on the abstraction.
+    
+* **The Hollywood Principle: Don't call us, we'll call you.** The Hollywood Principle gives us a way to prevent **"dependency rot."** Dependency rot happens when you have high-level components depending on low-level components depending on high-level components depending on sideways components depending on low-level components, and so on. When rot sets in, no one can easily understand the way a system is designed. With the Hollywood Principle, we allow low-level components to hook themselves into a system, but the high-level components determine when they are needed, and how. In other words, the high-level components give the low-level components a “don’t call us, we’ll call you” treatment.
 
 ### Design Patterns
 
