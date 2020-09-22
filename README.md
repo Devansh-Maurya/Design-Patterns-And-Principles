@@ -55,3 +55,8 @@
   * **Example:** A configurable remote control performing its actions using command objects
       1. [Without undo on invoker](src/command/RemoteLoader.kt)
       2. [With undo on invoker](src/command/RemoteLoaderWithUndo.kt)
+      
+* **Iterator Pattern: The Iterator Pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.** the pattern gives you a way to step through the elements of an aggregate without having to know how things are represented under the covers. once you have a uniform way of accessing the elements of all your aggregate objects, you can write polymorphic code that works with any of these aggregates — just like the printMenu() method, which doesn’t care if the menu items are held in an Array or ArrayList (or anything else that can create an Iterator), as long as it can get hold of an Iterator. The other important impact on your design is that the Iterator Pattern takes the responsibility of traversing elements and gives that responsibility to the iterator object, not the aggregate object. This not only keeps the aggregate interface and implementation simpler, it removes the responsibility for iteration from the aggregate and keeps the aggregate focused on the things it should be focused on (managing a collection of objects), not on iteration.
+  * **Example:** Iterating over a diner menu using iterator pattern.
+    1. [From scratch](src/iterator/dinermenu/scratch)
+    2. [Using Kotlin's Iterator and Iterable](src/iterator/dinermenu/inbuilt)
