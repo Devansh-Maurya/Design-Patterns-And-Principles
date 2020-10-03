@@ -11,7 +11,7 @@ import javax.naming.NoPermissionException
 class CommandExecutorProxy(user: String, password: String) : CommandExecutor {
 
     private val isAdmin: Boolean = user == "Devansh" && password == "Maurya"
-    private val executor: CommandExecutor by lazy { CommandExecutorImpl() }
+    private val executor: CommandExecutor by lazy { CommandExecutorImpl() } /**Expensive to create object**/
 
     override fun runCommand(cmd: String) {
         if (isAdmin) {
