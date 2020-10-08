@@ -18,6 +18,14 @@
     _**Where’s the “inversion” in Dependency Inversion Principle?**_
     
     The “inversion” in the name Dependency Inversion Principle is there because it inverts the way you typically might think about your OO design. The low-level components depend on a higher level abstraction. Likewise, the high-level component is also tied to the same abstraction. So, the top-to-bottom dependency chart has inverted itself, with both high-level and low- level modules now depending on the abstraction.
+    
+* **Principle of Least Knowledge (Law of Demeter): Talk only to your immediate friends** It means when you are designing a system, for any object, be careful of the number of classes it interacts with and also how it comes to interact with those classes. This principle prevents us from creating designs that have a large number of classes coupled together so that changes in one part of the system cascade to other parts. When you build a lot of dependencies between many classes, you are building a fragile system that will be costly to maintain and complex for others to understand. But how do you keep from doing this? The principle provides some guidelines: take any object; now from any method in that object, the principle tells us that we should only invoke methods that belong to:
+    * The object itself
+    * Objects passed in as a parameter to the method
+    * Any object the method creates or instantiates (Notice that these guidelines tell us not to call methods on objects that were returned from calling other methods!!)
+    * Any components of the object (Think of a “component” as any object that is referenced by an instance variable. In other words, think of this as a HAS-A relationship)
+    
+    What’s the harm in calling the method of an object we get back from another call? Well, if we were to do that, then we’d be making a request of another object’s subpart (and increasing the number of objects we directly know). In such cases, the principle forces us to ask the object to make the request for us; that way we don’t have to know about its component objects (and we keep our circle of friends small).
 
 ### Design Patterns
 
@@ -48,5 +56,8 @@
       1. [Without undo on invoker](src/command/RemoteLoader.kt)
       2. [With undo on invoker](src/command/RemoteLoaderWithUndo.kt)
       
+* **Adapter Pattern: The Adapter Pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.** This pattern allows us to use a client with an incompatible interface by creating an Adapter that does the conversion. This acts to decouple the client from the implemented interface, and if we expect the interface to change over time, the adapter encapsulates that change so that the client doesn't have to be modified each time it needs to operate against a different interface. The Adapter Pattern is full of good OO design principles. It makes use of object composition to wrap the **adaptee** with an altered interface. This approach has the added advantage that we can use an adapter with any subclass of the adaptee. The pattern binds the client to an interface, not an implementation; we could use several adapters, each converting a different backend set of classes. Or, we could add new implementations after the fact, as long as they adhere to the **Target interface.** Implementing an adapter may require little work or a great deal of work depending on the size and complexity of the target interface. There are two forms of the Adapter Pattern: **object** and **class adapters**. The example below is an example of **object adapter**. Class adapters require multiple inheritance and thus are not found in Kotlin (and Java).
+  * **Example:** [Duck simulator using a Turkey in place of a duck using a `TurkeyAdapter`](src/adapter/ducksimulator)
+
 * **Facade Pattern: The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.** To use the Facade Pattern, we create a class that simplifies and unifies a set of more complex classes that belong to some subsystem. Unlike a lot of patterns, Facade is fairly straightforward.
   * **Example:** [Home Theater system's interface simplified by using a Facade pattern](src/facade/hometheaterexample)
