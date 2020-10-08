@@ -26,6 +26,8 @@
     * Any components of the object (Think of a “component” as any object that is referenced by an instance variable. In other words, think of this as a HAS-A relationship)
     
     What’s the harm in calling the method of an object we get back from another call? Well, if we were to do that, then we’d be making a request of another object’s subpart (and increasing the number of objects we directly know). In such cases, the principle forces us to ask the object to make the request for us; that way we don’t have to know about its component objects (and we keep our circle of friends small).
+    
+* **The Hollywood Principle: Don't call us, we'll call you.** The Hollywood Principle gives us a way to prevent **"dependency rot."** Dependency rot happens when you have high-level components depending on low-level components depending on high-level components depending on sideways components depending on low-level components, and so on. When rot sets in, no one can easily understand the way a system is designed. With the Hollywood Principle, we allow low-level components to hook themselves into a system, but the high-level components determine when they are needed, and how. In other words, the high-level components give the low-level components a “don’t call us, we’ll call you” treatment.
 
 ### Design Patterns
 
