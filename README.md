@@ -1,5 +1,8 @@
-# Design Patterns and Principles
-**A collection of design patterns and principles written in Kotlin.**
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Devansh-Maurya/Design-Patterns-And-Principles/master/Design%20Patterns%20%26%20Principles.png"/>
+  <h2 align = "center">A collection of design patterns and principles written in Kotlin</h3>
+</p>
+
 
 ### What are Design Principles?
 
