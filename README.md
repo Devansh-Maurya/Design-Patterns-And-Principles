@@ -20,7 +20,7 @@ If you find yourself in a context with a problem that has a goal that is affecte
 
 ## Design Principles
 
-#### Index
+### Index
 
 1. Identify the aspects of your application that vary and separate them from what stays the same.
 2. Program to an interface, not an implementation
@@ -65,7 +65,7 @@ If you find yourself in a context with a problem that has a goal that is affecte
 
 ## Design Patterns
 
-#### Index
+### Index
 
 1. Strategy
 2. Observer
