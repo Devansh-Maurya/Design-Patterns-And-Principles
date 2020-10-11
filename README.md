@@ -20,6 +20,18 @@ If you find yourself in a context with a problem that has a goal that is affecte
 
 ## Design Principles
 
+#### Index
+
+1. Identify the aspects of your application that vary and separate them from what stays the same.
+2. Program to an interface, not an implementation
+3. Favor composition over inheritance
+4. Strive for loosely coupled designs between objects that interact
+5. The Open-Closed Principle
+6. Dependency Inversion Principle
+7. Principle of Least Knowledge (Law of Demeter)
+8. The Hollywood Principle
+9. Single Responsibility
+
 * **Identify the aspects of your application that vary and separate them from what stays the same.** Take the parts that vary and encapsulate them, so that later you can alter or extend the parts that vary without affecting those that don’t.
 
 * **Program to an interface, not an implementation.** "Program to an interface" really means "Program to a supertype". The word interface is overloaded here. There’s the concept of interface, but there’s also the Java construct interface. You can program to an interface, without having to actually use a Java interface. The point is to exploit polymorphism by programming to a supertype so that the actual runtime object isn’t locked into the code.
@@ -52,6 +64,23 @@ If you find yourself in a context with a problem that has a goal that is affecte
     * Cohesion is a more general concept than the Single Responsibility Principle, but the two are closely related. Classes that adhere to the principle tend to have high cohesion and are more maintainable than classes that take on multiple responsibilities and have low cohesion.
 
 ## Design Patterns
+
+#### Index
+
+1. Strategy
+2. Observer
+3. Decorator
+4. Factory Method
+5. Abstract Factory
+6. Singleton
+7. Command
+8. Adapter
+9. Facade
+10. Template Method
+11. Iterator
+12. Composite
+13. State
+14. Proxy
 
 * **Strategy Pattern:** The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently of clients that use it.
   * **Example:** [An action game design using Strategy pattern](https://github.com/Devansh-Maurya/Design-Patterns-And-Principles/tree/master/src/strategy/actiongame)
