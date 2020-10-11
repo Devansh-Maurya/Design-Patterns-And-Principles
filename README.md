@@ -1,7 +1,24 @@
 # Design Patterns and Principles
 **A collection of design patterns and principles written in Kotlin.**
 
-### Design Principles
+### What are Design Principles?
+
+**A design principle is a basic tool or technique that can be applied to designing or writing code to make that code more maintainable, flexible, or extensible.**
+
+[Explore the Design Principles in this repo](https://github.com/Devansh-Maurya/Design-Patterns-And-Principles#design-principles)
+
+### What are Design Patterns?
+
+**A design pattern is a solution to a problem in a context.**
+* The **context** is the situation in which the pattern applies. This should be a recurring situation.
+* The **problem** refers to the goal you are trying to achieve in this context, but it also refers to any constraints that occur in the context.
+* The **solution** is what you’re after: a general design that anyone can apply which resolves the goal and set of constraints.
+
+If you find yourself in a context with a problem that has a goal that is affected by a set of constraints, then you can apply a design that resolves the goal and constraints and leads to a solution.
+
+[Explore the Design Patterns in this repo](https://github.com/Devansh-Maurya/Design-Patterns-And-Principles#design-patterns)
+
+## Design Principles
 
 * **Identify the aspects of your application that vary and separate them from what stays the same.** Take the parts that vary and encapsulate them, so that later you can alter or extend the parts that vary without affecting those that don’t.
 
@@ -34,7 +51,7 @@
     * We say that a module or class has high cohesion when it is designed around a set of related functions, and we say it has low cohesion when it is designed around a set of unrelated functions.
     * Cohesion is a more general concept than the Single Responsibility Principle, but the two are closely related. Classes that adhere to the principle tend to have high cohesion and are more maintainable than classes that take on multiple responsibilities and have low cohesion.
 
-### Design Patterns
+## Design Patterns
 
 * **Strategy Pattern:** The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently of clients that use it.
   * **Example:** [An action game design using Strategy pattern](https://github.com/Devansh-Maurya/Design-Patterns-And-Principles/tree/master/src/strategy/actiongame)
