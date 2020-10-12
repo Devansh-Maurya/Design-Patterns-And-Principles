@@ -6,7 +6,7 @@
 
 **A design principle is a basic tool or technique that can be applied to designing or writing code to make that code more maintainable, flexible, or extensible.**
 
-[Explore the Design Principles in this repo](design-principles.md)
+[Explore the Design Principles on this website](design-principles.md)
 
 ### What are Design Patterns?
 
@@ -18,7 +18,7 @@
 
 If you find yourself in a context with a problem that has a goal that is affected by a set of constraints, then you can apply a design that resolves the goal and constraints and leads to a solution.
 
-[Explore the Design Patterns in this repo](design-patterns.md)
+[Explore the Design Patterns on this website](design-patterns.md)
 
 **Credits:** This repo is a collection of the notes I made while reading the book **Head First Design Patterns**. The Head First Design Patterns book is a great read if you are just starting to learn design patterns or if you want to learn patterns in a non-boring and non-academic way.
 
