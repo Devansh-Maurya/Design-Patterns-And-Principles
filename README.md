@@ -83,6 +83,7 @@ If you find yourself in a context with a problem that has a goal that is affecte
 12. Composite
 13. State
 14. Proxy
+15. Builder
 
 * **Strategy Pattern:** The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently of clients that use it.
   * **Example:** [An action game design using Strategy pattern](https://github.com/Devansh-Maurya/Design-Patterns-And-Principles/tree/master/src/strategy/actiongame)
@@ -148,3 +149,8 @@ If you find yourself in a context with a problem that has a goal that is affecte
     9. **Copy-On-Write Proxy: Controls the copying of an object by deferring the copying of an object until it is required by a client.** This is a variant of the **Virtual Proxy**. Seen in Java's `CopyOnWriteArrayList`.
     
   Proxy is structurally similar to Decorator, but the two differ in their purpose. The Decorator Pattern adds behavior to an object, while a Proxy controls access. Like any wrapper, proxies will increase the number of classes and objects in your designs.
+  
+* **Builder Pattern: The Builder Pattern helps in construction of complex objects. Typically, you want that an object can only be created by a builder and adheres to some validation, which you can put in the build method.
+  * **Example:** [Building a book](src/builder)
+    
+  Proxy is   
